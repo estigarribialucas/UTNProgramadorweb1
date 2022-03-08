@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+		var metros;
+
+		metros=prompt('Ingrese los metros a recorrer:','')
+
+		if (metros > 0 && metros <= 1000) {
+			document.write('Te recomendamos ir a pie');
+		} else if (metros > 1000 && metros <= 10000) {
+			document.write('Te recomendamos ir en bicicleta');
+		} else if (metros > 10000 && metros <= 30000) {
+			document.write('Te recomendamos ir en colectivo');
+		} else if (metros > 30000 && metros <= 100000) {
+			document.write('Te recomendamos ir en auto');
+		} else if (metros > 100000 ) {
+			document.write('Te recomendamos ir en avion');
+		} 
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="EstiloTarea1.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="cuadrado rojo" onclick="cambiarFondo('red')"></div>
+        <div class="cuadrado verde" onclick="cambiarFondo('green')"></div>
+        <div class="cuadrado azul" onclick="cambiarFondo('blue')"></div>
+        <div class=" blanco" onclick="cambiarFondo('white')">
+            <button name="Clear">Borrar</button>
+        </div>
+    </div>
+
+    <style>
+      
+    </style>
+    <script>
+        function cambiarFondo(color) {
+            document.querySelector('body').style.background = color;
+        }
+    </script>
+</body>
+</html>
