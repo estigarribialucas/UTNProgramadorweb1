@@ -23,27 +23,30 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Trabajos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Nosotros</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
-              Dropdown
+              Tienda
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Remeras</a></li>
+              <li><a class="dropdown-item" href="#">Tazas</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Presupuestos</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <a class="nav-link disabled">Diseño digital</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -54,77 +57,109 @@
     </div>
   </nav>
   <!--imagenes carousel-->
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-        aria-label="Slide 4"></button>
+  <div class="carruselgrupo">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="IMG/Camara1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="IMG/Camara2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="IMG/Tablet.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="IMG/Tablet2 (2).jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="IMG/Camara1.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="IMG/Camara2.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="IMG/Tablet.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="IMG/Tablet2 (2).jpg" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
   <!--Linea divisoria-->
   <div class="linea"></div>
   <!--Trabajos-->
-
   <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Nuestros trabajos</a>
     </div>
   </nav>
-
-  <div class="card-group">
-    <div class="card">
-      <img src="IMG/Aburrido-Horizontal.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Diseños digitales</h5>
-        <p class="card-text">Estos proyectos de dibujo digital son echos junto al cliente desde principio hasta el fin
-          con todos los cambios que surgan, constestando a cualquier duda e inquietud.</p>
-        <p class="saber-mas"><small class="text-muted">Saber más</small></p>
+  <div id="trabajos" class="col-lg-10 offset-lg-1">
+    <div class="card-group">
+      <div class="card">
+        <img src="IMG/Aburrido-Horizontal.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Diseños digitales</h5>
+          <p class="card-text">Estos proyectos de dibujo digital son echos junto al cliente desde principio hasta el fin
+            con todos los cambios que surgan, constestando a cualquier duda e inquietud.</p>
+          <p class="saber-mas"><small class="text-muted">Saber más</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="IMG/Lluvia.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Fotografia</h5>
+          <p class="card-text">La fotografia es nuestro fuerte, con gran amplitud de sectores en lo que a esto respecta,
+            desde el estudio hasta cualquier fiesta que quieras inmortalizar en fotos.</p>
+          <p class="saber-mas"><small class="text-muted">Saber más</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="IMG/Nube.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Edición Fotografica</h5>
+          <p class="card-text">Nuestro equipo esta totalmente capacitado para poder reparar o mejorar fotos que
+            necesiten
+            de nuestra.</p>
+          <p class="saber-mas"><small class="text-muted">Saber más</small></p>
+        </div>
       </div>
     </div>
-    <div class="card">
-      <img src="IMG/Lluvia.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Fotografia</h5>
-        <p class="card-text">La fotografia es nuestro fuerte, con gran amplitud de sectores en lo que a esto respecta,
-          desde el estudio hasta cualquier fiesta que quieras inmortalizar en fotos.</p>
-        <p class="saber-mas"><small class="text-muted">Saber más</small></p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="IMG/Nube.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Edición Fotografica</h5>
-        <p class="card-text">Nuestro equipo esta totalmente capacitado para poder reparar o mejorar fotos que necesiten de nuestra.</p>
-        <p class="saber-mas"><small class="text-muted">Saber más</small></p>
+  </div>
+  <!--Contacto-->
+  <div class="visitanos">
+    <div id="contacto" class="container">
+      <div class="row">
+        <!--Mapa-->
+        <h2>Contacto</h2>
+        <div class="col-sm-6 col-md-5 col-lg-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2202745348386!2d-58.42212748451987!3d-34.59859106473451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca62d4cf1563%3A0x686de505d84c67e6!2sAv.%20Medrano%20951%2C%20C1179AAQ%20CABA!5e0!3m2!1ses-419!2sar!4v1648335241011!5m2!1ses-419!2sar"
+              width="100%" height="350px" ; referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <!--Formulario-->
+        <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">
+          <label for="exampleFormControlInput1" class="form-label">Email</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">No soy un robot</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
       </div>
     </div>
   </div>
@@ -133,7 +168,12 @@
 
 
 
-  </div>
+
+
+
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>

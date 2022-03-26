@@ -2,12 +2,14 @@
 body{
     background-color:#F2F2F2 ;
 }
-.carousel-inner {
-max-height: 750px;
-padding-top: 20px;
-padding-left: 40px;
-padding-right: 40px;
+.carruselgrupo{
+    padding: 20px 40px 0;
+
 }
+.carousel-inner {
+    max-height: 750px;
+}
+
 .linea {
     border-top: 1px solid black;
     max-width: 80%;
@@ -16,4 +18,7 @@ padding-right: 40px;
 }
 .saber-mas{
     cursor: pointer;
+}
+.visitanos{
+margin: 3%;
 }
