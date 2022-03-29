@@ -2,6 +2,12 @@
 body{
     background-color:#F2F2F2 ;
 }
+/* Titulo */
+h1{
+    font-family: 'Lobster', cursive;
+}
+
+/* Carrusel */
 .carruselgrupo{
     padding: 20px 40px 0;
 
@@ -9,16 +15,43 @@ body{
 .carousel-inner {
     max-height: 750px;
 }
-
+/* Linea divisoria */
 .linea {
     border-top: 1px solid black;
     max-width: 80%;
     margin: 20px auto 0 auto;
     padding-bottom: 20px;
 }
+/* Nuestros trabajos */
 .saber-mas{
     cursor: pointer;
 }
-.visitanos{
-margin: 3%;
+.BoxNuestrosTrabajos{
+    margin:15px;
+}
+/* Tienda */
+h2{
+    font-family: 'Julius Sans One', sans-serif; 
+}
+.BoxTienda{
+    background-color:#ebe9e9c7;
+    margin: 50px;
+    padding: 30px;
+    border: 1px solid #d8d7d7;
+    border-radius: 9px 9px 9px 9px;
+}
+/* Contacto-visitanos */
+.BoxContacto{
+    background-color:#ebe9e9c7 ;
+    padding: 3%;
+    border: 1px solid #d8d7d7;
+    border-radius: 9px 9px 9px 9px;
+}
+.Mapa{
+    border: 1px solid #d8d7d7;
+    border-radius: 9px 9px 9px 9px;
+}
+/* blackbar */
+.blackbar{
+    background-color: black;
 }

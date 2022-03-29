@@ -9,13 +9,16 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Julius+Sans+One&family=Lobster&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
   <!--Barra de inicio-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">DropBlack</a>
+      <h1 class="navbar-brand fs-1" href="#">DropBlack</h1>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -31,22 +34,11 @@
           <li class="nav-item">
             <a class="nav-link" data-scroll href="#">Nosotros</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Tienda
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Remeras</a></li>
-              <li><a class="dropdown-item" href="#">Tazas</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Presupuestos</a></li>
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link" data-scroll href="#Tienda">Tienda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled">Diseño digital</a>
+            <h6 class="nav-link disabled">Diseño digital</h>
           </li>
         </ul>
         <form class="d-flex">
@@ -98,67 +90,229 @@
   <!--Linea divisoria-->
   <div class="linea"></div>
   <!--Trabajos-->
-  <nav class="navbar navbar-dark bg-dark">
+  <nav id="trabajos" class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Nuestros trabajos</a>
+      <h2 class="navbar-brand fs-4">Nuestros trabajos</h2>
     </div>
   </nav>
-  <div id="trabajos" class="col-lg-10 offset-lg-1">
-    <div class="card-group">
-      <div class="card">
-        <img src="IMG/Aburrido-Horizontal.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Diseños digitales</h5>
-          <p class="card-text">Estos proyectos de dibujo digital son echos junto al cliente desde principio hasta el fin
-            con todos los cambios que surgan, constestando a cualquier duda e inquietud.</p>
-          <p class="saber-mas"><small class="text-muted">Saber más</small></p>
+  <div class="BoxNuestrosTrabajos">
+    <div class="col-lg-10 offset-lg-1">
+      <div class="card-group">
+        <div class="card">
+          <img src="IMG/Aburrido-Horizontal.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Diseños digitales</h5>
+            <p class="card-text">Estos proyectos de dibujo digital son echos junto al cliente desde principio hasta el
+              fin
+              con todos los cambios que surgan, constestando a cualquier duda e inquietud.</p>
+            <p class="saber-mas"><small class="text-muted">Saber más</small></p>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="IMG/Lluvia.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Fotografia</h5>
-          <p class="card-text">La fotografia es nuestro fuerte, con gran amplitud de sectores en lo que a esto respecta,
-            desde el estudio hasta cualquier fiesta que quieras inmortalizar en fotos.</p>
-          <p class="saber-mas"><small class="text-muted">Saber más</small></p>
+        <div class="card">
+          <img src="IMG/Lluvia.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Fotografia</h5>
+            <p class="card-text">La fotografia es nuestro fuerte, con gran amplitud de sectores en lo que a esto
+              respecta,
+              desde el estudio hasta cualquier fiesta que quieras inmortalizar en fotos.</p>
+            <p class="saber-mas"><small class="text-muted">Saber más</small></p>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="IMG/Nube.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Edición Fotografica</h5>
-          <p class="card-text">Nuestro equipo esta totalmente capacitado para poder reparar o mejorar fotos que
-            necesiten
-            de nuestra.</p>
-          <p class="saber-mas"><small class="text-muted">Saber más</small></p>
+        <div class="card">
+          <img src="IMG/Nube.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Edición Fotografica</h5>
+            <p class="card-text">Nuestro equipo esta totalmente capacitado para poder reparar o mejorar fotos que
+              necesiten
+              de nuestra.</p>
+            <p class="saber-mas"><small class="text-muted">Saber más</small></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <!--Tienda-->
+  <nav id="Tienda" class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <h2 class="navbar-brand fs-4">Tienda</h2>
+    </div>
+  </nav>
+  <div class="BoxTienda">
+    <!--Remeras-->
+    <p>
+      <a class="btn btn-dark d-grid gap-2 col-6 mx-auto" data-bs-toggle="collapse" href="#multiCollapseExample1"
+        role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Remeras</a>
+    </p>
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="card card-body">
+          <div class="row row-cols-1 row-cols-md-4 g-1">
+            <div class="col">
+              <div class="card">
+                <img src="IMG/tienda1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tulipan</h5>
+                  <p class="card-text">Para pedir esta remera envianos un mail con tu nombre, direción, talla y nombre
+                    del diseño. El pago se realiza en efectivo en el momento de entrega.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="IMG/tienda2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Flor blanca</h5>
+                  <p class="card-text">Para pedir esta remera envianos un mail con tu nombre, direción, talla y nombre
+                    del diseño. El pago se realiza en efectivo en el momento de entrega.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="IMG/tienda3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Taza Café</h5>
+                  <p class="card-text">Para pedir esta remera envianos un mail con tu nombre, direción, talla y nombre
+                    del diseño. El pago se realiza en efectivo en el momento de entrega.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="IMG/tienda4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Good Days</h5>
+                  <p class="card-text">Para pedir esta remera envianos un mail con tu nombre, direción, talla y nombre
+                    del diseño. El pago se realiza en efectivo en el momento de entrega.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="IMG/tienda5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Fresas</h5>
+                  <p class="card-text">Para pedir esta remera envianos un mail con tu nombre, direción, talla y nombre
+                    del diseño. El pago se realiza en efectivo en el momento de entrega.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="IMG/tienda6.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Esperando</h5>
+                  <p class="card-text">Para pedir esta remera envianos un mail con tu nombre, direción, talla y nombre
+                    del diseño. El pago se realiza en efectivo en el momento de entrega.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Tazas-->
+    <p>
+      <a class="btn btn-dark d-grid gap-2 col-6 mx-auto" data-bs-toggle="collapse" href="#multiCollapseExample2"
+        role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Tazas</a>
+    </p>
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample2">
+        <div class="card card-body">
+          <div class="row row-cols-1 row-cols-md-4 g-1">
+            <div class="col">
+              <div class="card">
+                <img src="IMG/Taza1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Posibilidades</h5>
+                  <p class="card-text">Para pedir esta taza envianos un mail con tu nombre, direción, talla y nombre
+                    del diseño. El pago se realiza en efectivo en el momento de entrega.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="IMG/Taza2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Océano</h5>
+                  <p class="card-text">Para pedir esta taza envianos un mail con tu nombre, direción, talla y nombre
+                    del diseño. El pago se realiza en efectivo en el momento de entrega.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="IMG/Taza3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Caminos</h5>
+                  <p class="card-text">Para pedir esta taza envianos un mail con tu nombre, direción, talla y nombre
+                    del diseño. El pago se realiza en efectivo en el momento de entrega.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="IMG/Taza4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Encuentro</h5>
+                  <p class="card-text">Para pedir esta taza envianos un mail con tu nombre, direción, talla y nombre
+                    del diseño. El pago se realiza en efectivo en el momento de entrega.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="IMG/Taza5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Origen</h5>
+                  <p class="card-text">Para pedir esta taza envianos un mail con tu nombre, direción, talla y nombre
+                    del diseño. El pago se realiza en efectivo en el momento de entrega.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="IMG/Taza6.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">No Problem</h5>
+                  <p class="card-text">Para pedir esta taza envianos un mail con tu nombre, direción, talla y nombre
+                    del diseño. El pago se realiza en efectivo en el momento de entrega.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!--Contacto-->
-  <div class="visitanos">
-    <div id="contacto" class="container">
-      <div class="row">
-        <!--Mapa-->
-        <h2>Contacto</h2>
-        <div class="col-sm-6 col-md-5 col-lg-6">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2202745348386!2d-58.42212748451987!3d-34.59859106473451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca62d4cf1563%3A0x686de505d84c67e6!2sAv.%20Medrano%20951%2C%20C1179AAQ%20CABA!5e0!3m2!1ses-419!2sar!4v1648335241011!5m2!1ses-419!2sar"
-              width="100%" height="350px" ; referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div id="contacto" class="Contacto">
+    <div class="container">
+      <div class="BoxContacto">
+        <div class="row ">
+          <!--Mapa-->
+          <h2>Contacto</h2>
+          <div class="col-sm-6 col-md-5 col-lg-6">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="Mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2202745348386!2d-58.42212748451987!3d-34.59859106473451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca62d4cf1563%3A0x686de505d84c67e6!2sAv.%20Medrano%20951%2C%20C1179AAQ%20CABA!5e0!3m2!1ses-419!2sar!4v1648335241011!5m2!1ses-419!2sar"
+                width="100%" height="350px" ; referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
-        </div>
-        <!--Formulario-->
-        <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">
-          <label for="exampleFormControlInput1" class="form-label">Email</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-          <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">No soy un robot</label>
+          <!--Formulario-->
+          <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">No soy un robot</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
           </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
         </div>
       </div>
     </div>
@@ -166,12 +320,10 @@
 
 
 
+  <!--BlackBar-->
+  <div class="blackbar">
 
-
-
-
-
-
+  </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
