@@ -286,11 +286,17 @@
         </div>
         <!--Formulario-->
         <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">
-          <form action="/" method="post">
+          <form action="/index" method="post" class="">
+            <p>
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" name="nombre">
+            </p>
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
-            <label for="text" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="mensaje" rows="6" name="mensaje"></textarea>
+            <input type="email" class="form-control" placeholder="name@example.com" name="email">
+           <div class="form-group">
+             <label for="mensaje">Mensaje</label>
+             <textarea class="form-control" name="mensaje" id="mensaje" rows="4"></textarea>
+           </div>
             <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">No soy un robot</label>
@@ -298,7 +304,7 @@
             <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
           {{#if message}}
-            {{mesagge}}
+            {{message}}
           {{/if}}
         </div>
       </div>
