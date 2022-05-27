@@ -1,0 +1,17 @@
+<div class="container">
+    <form action="/admin/login" method="post">
+        <div class="mb-3">
+            <label class="form-label">Nombre de usuario</label>
+            <input type="text" class="form-control" id="usuario" aria-describedby="emailHelp" name="usuario"
+                placeholder="Usuario">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    {{#if error}}
+        <p>Usuario y contraseña incorrectos</p>
+    {{/if}}
+</div>

@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
-
+var nodemailer = require('nodemailer');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-var nodemailer = require('nodemailer');
+
 
 router.post('/', async (req, res, next) => {
 
