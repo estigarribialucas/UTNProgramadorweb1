@@ -5,6 +5,7 @@ var usuariosModel = require('./../../models/usuariosModel');
 router.get('/', function (req, res, next) {
   res.render('admin/novedades',{
       layout: 'admin/layout',
+      usuario: req.session.nombre
   });
 });
 
