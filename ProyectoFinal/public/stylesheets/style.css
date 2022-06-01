@@ -1,20 +1,23 @@
 /*imagenes de carousel 1280x800*/
-body{
-    background-color:#F2F2F2 ;
+body {
+    background-color: #F2F2F2;
 }
+
 /* Titulo */
-h1{
+h1 {
     font-family: 'Lobster', cursive;
 }
 
 /* Carrusel */
-.carruselgrupo{
+.carruselgrupo {
     padding: 20px 40px 0;
 
 }
+
 .carousel-inner {
     max-height: 750px;
 }
+
 /* Linea divisoria */
 .linea {
     border-top: 1px solid black;
@@ -22,36 +25,39 @@ h1{
     margin: 20px auto 0 auto;
     padding-bottom: 20px;
 }
+
 /* Nuestros trabajos */
-.saber-mas{
-    cursor: pointer;
+.BoxNuestrosTrabajos {
+margin: 30px;
 }
-.BoxNuestrosTrabajos{
-    margin:15px;
+/* Novedades */
+.boxnovedades{
+    margin: 80px;
+   max-width: 500px;
 }
 /* Tienda */
-h2{
-    font-family: 'Julius Sans One', sans-serif; 
+h2 {
+    font-family: 'Julius Sans One', sans-serif;
 }
-.BoxTienda{
-    background-color:#ebe9e9c7;
+
+.BoxTienda {
+    background-color: #ebe9e9c7;
     margin: 50px;
     padding: 30px;
     border: 1px solid #d8d7d7;
     border-radius: 9px 9px 9px 9px;
 }
+
 /* Contacto-visitanos */
-.BoxContacto{
-    background-color:#ebe9e9c7 ;
+.BoxContacto {
+    background-color: #ebe9e9c7;
     padding: 3%;
     border: 1px solid #d8d7d7;
     border-radius: 9px 9px 9px 9px;
 }
-.Mapa{
+
+.Mapa {
     border: 1px solid #d8d7d7;
     border-radius: 9px 9px 9px 9px;
 }
-/* blackbar */
-.blackbar{
-    background-color: black;
-}
+
