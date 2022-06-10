@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-xl">
+            <div class="TablaAgregar">
+                <nav class="navbar navbar-dark bg-dark mb-4 rounded">
+                    <div class="container-fluid ">
+                        <a class="navbar-brand ">Agregar</a>
+                    </div>
+                </nav>
+                <form action="/admin/novedades/agregar" method="post">
+                    <div class="mb-4">
+                        <label for="Titulo" class="form-label">Titulo</label>
+                        <input type="text" class="form-control" name="titulo">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlTextarea1" class="form-label">Subtitulo</label>
+                        <textarea name="subtitulo" class="form-control" id="exampleFormControlTextarea1"
+                            rows="2"></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlTextarea1" class="form-label">Cuerpo</label>
+                        <textarea name="cuerpo" class="form-control" id="exampleFormControlTextarea1"
+                            rows="5"></textarea>
+                    </div>
+                    {{#if error}}
+                    <div class="alert alert-danger" role="alert">
+                        {{message}}
+                    </div>
+                    {{/if}}
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="submit" class="btn btn-outline-dark">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>

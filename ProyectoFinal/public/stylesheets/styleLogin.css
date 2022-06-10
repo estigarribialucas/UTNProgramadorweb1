@@ -1,0 +1,76 @@
+/* Background */
+body {
+    background-color: #F2F2F2;
+    opacity: 1;
+    background: linear-gradient(135deg, #57657255 25%, transparent 25%) -7px 0/ 13px 14px, linear-gradient(225deg, #353b41 25%, transparent 25%) -7px 0/ 13px 13px, linear-gradient(315deg, #21252955 25%, transparent 25%) 0px 0/ 13px 13px, linear-gradient(45deg, #394047 25%, #F2F2F2 25%) 0px 0/ 13px 13px;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/* Titulo */
+h1 {
+    font-family: 'Lobster', cursive;
+    color: white;
+}
+
+/* Tienda */
+h2 {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+/* Login */
+.BoxLogin {
+    margin-top: 70px;
+    border: 1px solid #c2bfbf;
+    background: #e7e5e5;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 9px 7px 13px -4px rgba(0, 0, 0, 0.69);
+}
+
+.TituloLogin {
+    margin: 20px;
+}
+
+/* ErrorLogin */
+.ErrorLogin {
+    margin-top: 20px;
+}
+
+/* NombreUsuario */
+
+/* TablaNovedades */
+
+.TablaNovedades {
+    padding-top: 20px;
+    border: 1px solid #c2bfbf;
+    background: #ffffff;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 9px 7px 13px -4px rgba(0, 0, 0, 0.69);
+}
+ /* Tabla Agregar */
+.TablaAgregar {
+    padding-top: 20px;
+    border: 1px solid #c2bfbf;
+    background: #ffffff;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 9px 7px 13px -4px rgba(0, 0, 0, 0.69);
+    padding: 20px 24px 20px 24px;
+}
+.TablaModificar {
+    padding-top: 20px;
+    border: 1px solid #c2bfbf;
+    background: #ffffff;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 9px 7px 13px -4px rgba(0, 0, 0, 0.69);
+    padding: 20px 24px 20px 24px;
+}
+
+
+
+/* Pie de pagina */
+.footer {
+    margin-top: 400px;
+}

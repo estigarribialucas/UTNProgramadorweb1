@@ -1,0 +1,47 @@
+/* Background */
+body {
+    background-color: #F2F2F2;
+    opacity: 1;
+    background: linear-gradient(135deg, #57657255 25%, transparent 25%) -7px 0/ 13px 14px, linear-gradient(225deg, #353b41 25%, transparent 25%) -7px 0/ 13px 13px, linear-gradient(315deg, #21252955 25%, transparent 25%) 0px 0/ 13px 13px, linear-gradient(45deg, #394047 25%, #F2F2F2 25%) 0px 0/ 13px 13px;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/* Titulo */
+h1 {
+    font-family: 'Lobster', cursive;
+    color: white;
+}
+/* Tienda */
+.remeras {
+
+    margin-top: 30px;
+}
+h2 {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.BTienda {
+    margin: 20px;
+}
+
+.NavTienda {
+    margin-left: 10px;
+
+}
+
+.GrillaTienda {
+    border: 1px solid #c2bfbf;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px 8px 8px 8px;
+    background-color: #f8f6f6;
+    box-shadow: 9px 7px 13px -4px rgba(0,0,0,0.69);
+}
+.footer {
+    margin-top:100px ;
+}

@@ -1,17 +1,24 @@
 /*imagenes de carousel 1280x800*/
 body {
     background-color: #F2F2F2;
+    opacity: 1;
+    background: linear-gradient(135deg, #57657255 25%, transparent 25%) -7px 0/ 13px 14px, linear-gradient(225deg, #353b41 25%, transparent 25%) -7px 0/ 13px 13px, linear-gradient(315deg, #21252955 25%, transparent 25%) 0px 0/ 13px 13px, linear-gradient(45deg, #394047 25%, #F2F2F2 25%) 0px 0/ 13px 13px;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 /* Titulo */
 h1 {
     font-family: 'Lobster', cursive;
+    color: white;
 }
 
 /* Carrusel */
 .carruselgrupo {
-    padding: 20px 40px 0;
-
+    padding: 20px 20px 0;
 }
 
 .carousel-inner {
@@ -32,8 +39,7 @@ margin: 30px;
 }
 /* Novedades */
 .boxnovedades{
-    margin: 80px;
-   max-width: 500px;
+   margin: 30px;
 }
 /* Tienda */
 h2 {
@@ -50,7 +56,7 @@ h2 {
 
 /* Contacto-visitanos */
 .BoxContacto {
-    background-color: #ebe9e9c7;
+    background-color: #ebe9e9e7;
     padding: 3%;
     border: 1px solid #d8d7d7;
     border-radius: 9px 9px 9px 9px;
@@ -61,3 +67,6 @@ h2 {
     border-radius: 9px 9px 9px 9px;
 }
 
+.footer{
+    margin-top: 100px;
+}

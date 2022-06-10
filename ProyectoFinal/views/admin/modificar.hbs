@@ -1,0 +1,50 @@
+<div class="container" style="margin-top: 40px;">
+    <div class="row">
+        <div class="col">
+            <p class="text-end text-light">
+                <a href="/admin/novedades" class="btn btn-warning me-md-5"><i class="fa-solid fa-circle-arrow-left"></i>   Atrás</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-xl">
+            <div class="TablaModificar">
+                <nav class="navbar navbar-dark bg-dark mb-4 rounded">
+                    <div class="container-fluid ">
+                        <a class="navbar-brand ">Modificar la novedad</a>
+                    </div>
+                </nav>
+                <form action="/admin/novedades/modificar" method="post">
+                    <input type="hidden" value="{{novedad.id}}" name="id">
+                    <div class="mb-4">
+                        <label for="validationDefault01" class="form-label">Titulo</label>
+                        <input type="text" id="validationDefault01" class="form-control" value="{{novedad.titulo}}"
+                            name="titulo" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="validationDefault02" class="form-label">Subtitulo</label>
+                        <textarea name="subtitulo" class="form-control" id="validationDefault02" rows="2"
+                            required>{{novedad.subtitulo}}</textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="validationDefault03" class="form-label">Cuerpo</label>
+                        <textarea name="cuerpo" class="form-control" id="validationDefault03" rows="5"
+                            required>{{novedad.cuerpo}}</textarea>
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="submit" class="btn btn-outline-dark">Guardar</button>
+                    </div>
+                </form>
+                {{#if error}}
+                <div class="alert alert-danger" role="alert">
+                    {{message}}
+                </div>
+                {{/if}}
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>
