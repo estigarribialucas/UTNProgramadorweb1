@@ -127,36 +127,44 @@
   </div>
 </div>
 
-<!--Novedades-->
+<!--Nav-Novedades-->
 <nav id="novedades" class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <h2 class="navbar-brand fs-4">Novedades</h2>
   </div>
 </nav>
 
-<div class="boxnovedades">
-  <div class="container">
-    <div class="row ">
-      {{#each novedades}}
-      <div class="col-sm">
-        <div class="card h-100">
-          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal{{id}}"><img
-              src="images/Lluvia.jpg" class="img-fluid rounded-start" class="card-img-top">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">{{titulo}}</h5>
-            <p class="card-text">{{subtitulo}}</p>
+{{!-- NOVEDADES --}}
+<div class="container">
+  <div class="row">
+    <div class="col-0"></div>
+    <div class="col-xl">
+      <div class="boxnovedades">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {{#each novedades}}
+          <div class="col ">
+            <div class="card bg-dark text-white">
+              <a href="#"><img
+                  src="images/Lluvia.jpg" class="img-fluid rounded-start opacity-50" class="card-img-top">
+              </a>
+              <div class="card-img-overlay">
+                <h5 class="card-title">{{titulo}}</h5>
+                <p class="card-text ">{{subtitulo}}</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <a href="javascript:void(0);" class="btn btn-outline-light  btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#modal{{id}}"><i class="fa-solid fa-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </div>
+          {{/each}}
         </div>
       </div>
-      {{/each}}
     </div>
+    <div class="col-1"></div>
   </div>
 </div>
-
 
 
 

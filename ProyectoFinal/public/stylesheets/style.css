@@ -39,8 +39,14 @@ margin: 30px;
 }
 /* Novedades */
 .boxnovedades{
-   margin: 30px;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   padding: 20px;
+   border: 1px solid #bbb8b8;
+   background-color: #f5f3f3cb;
+   border-radius: 10px 10px 10px 10px;
 }
+
 /* Tienda */
 h2 {
     font-family: 'Julius Sans One', sans-serif;

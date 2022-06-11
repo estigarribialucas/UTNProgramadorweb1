@@ -1,25 +1,39 @@
-<div class="container" style="margin-top: 40px;">
-    <div class="row">
-        <div class="col">
-            <p class="text-end text-light">
-                <span class="NombreUsuario">Hola {{usuario}}!!</span>
-                <a href="/admin/login/logout" class="btn btn-danger">Cerrar sesión <i class="fas
-                 fa-sign-out-alt"></i></a>
-            </p>
-        </div>
+{{!-- Nav-bar --}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container-fluid">
+        <h1 class="navbar-brand fs-1">DropBlack</h1>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <button class="btn btn-secondary">
+                    <span class="NombreUsuario"><i class="fa-solid fa-user-large"></i> {{usuario}}</span>
+                </button>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="http://localhost:3000/">Home</a></li>
+                <li><a class="dropdown-item" href="#">Tienda</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/admin/login/logout">Cerrar sesión </a></li>
+            </ul>
+        </li>
     </div>
-</div>
+</nav>
+
+
+{{!-- Tabla --}}
 <div class="container">
     <div class="row">
         <div class="col-1"></div>
         <div class="col-xl">
             <div class="TablaNovedades ">
                 <div class="container ">
-                    <nav class="navbar navbar-dark bg-dark rounded-top">
+                    <nav class="navbar navbar-dark bg-dark rounded-top ">
                         <div class="container-fluid">
                             <a class="navbar-brand">Listado de Novedades</a>
                             <form class="d-flex">
-                                <a href="/admin/novedades/agregar" class="btn btn-success">+ Nuevo</a>
+                                <a href="/admin/novedades/agregar" class="btn btn-success"><i class="fa-solid fa-file-circle-plus"></i>       Nuevo</a>
                             </form>
                         </div>
                     </nav>
@@ -39,7 +53,8 @@
                                 <th scope="row">{{id}}</th>
                                 <td>{{titulo}}</td>
                                 <td class="text-end">
-                                    <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary"><i class="fas fa-pencil-alt"></i></a>
+                                    <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary"><i
+                                            class="fas fa-pencil-alt"></i></a>
                                     <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary"><i
                                             class="fas fa-trash"></i></a>
                                 </td>
