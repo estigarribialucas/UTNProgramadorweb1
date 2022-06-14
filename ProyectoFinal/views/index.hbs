@@ -135,17 +135,16 @@
 </nav>
 
 {{!-- NOVEDADES --}}
-<div class="container">
-  <div class="row">
-    <div class="col-0"></div>
-    <div class="col-xl">
+<div class="container-fluid">
+  <div class="row  ">
+    <div class="col-1"></div>
+    <div class="col-sm-8">
       <div class="boxnovedades">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-4 g-4">
           {{#each novedades}}
-          <div class="col ">
-            <div class="card bg-dark text-white">
-              <a href="#"><img
-                  src="images/Lluvia.jpg" class="img-fluid rounded-start opacity-50" class="card-img-top">
+          <div class="col-4">
+            <div class="card bg-dark text-white border-0">
+              <a href="#"><img src="{{{imagen}}}" class="img-fluid rounded-start opacity-50" class="card-img-top">
               </a>
               <div class="card-img-overlay">
                 <h5 class="card-title">{{titulo}}</h5>
@@ -162,7 +161,63 @@
         </div>
       </div>
     </div>
-    <div class="col-1"></div>
+ {{!-- Testimonios --}}
+    <div class="col-sm-3 align-self-center">
+      <div class="container">
+        <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+              aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner rounded-circle shadow-lg bg-dark text-white ">
+            <div class="carousel-item active">
+              <img src="images/testimonio1.jpg" class="d-block w-100 opacity-75" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5> Victoria Simón <i class="fa-regular fa-thumbs-up"></i></h5>
+                <p class="fst-italic">Exelente servicio la verdad.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/testimonio2.jpg" class="d-block w-100 opacity-75" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5> Emiliano Patrocinia <i class="fa-regular fa-thumbs-up"></i></h5>
+                <p class="fst-italic">Me arreglaron unas fotos de las vacaciones que estaban oscuras, unos genios.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/testimonio3.jpg" class="d-block w-100 opacity-75" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5> Edelmiro Abigaíl <i class="fa-regular fa-thumbs-up"></i></i></h5>
+                <p class="fst-italic">Me cubrieron un evento y con la mejor onda.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/testimonio4.jpg" class="d-block w-100 opacity-75" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5> Sergio Adelita <i class="fa-regular fa-thumbs-up"></i></i></h5>
+                <p class="fst-italic">Todo perfecto con mucha profecionalidad las fotos.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -179,6 +234,7 @@
       </div>
       <div class="modal-body">
         <h5>{{subtitulo}}</h5>
+        <img src="{{imagen}}" alt="">
         <p>{{cuerpo}}</p>
       </div>
     </div>
