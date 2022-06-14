@@ -411,8 +411,8 @@
               <a href="#"><img src="{{{imagen}}}" class="img-fluid rounded-start opacity-50" class="card-img-top">
               </a>
               <div class="card-img-overlay">
-                <h5 class="card-title">{{titulo}}</h5>
-                <p class="card-text ">{{subtitulo}}</p>
+                <h5 style="font-family: 'Fjalla One', sans-serif;" class="card-title">{{titulo}}</h5>
+                <p style="font-family: 'Merriweather', serif;" class="card-text ">{{subtitulo}}</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                   <a href="javascript:void(0);" class="btn btn-outline-light  btn-sm" data-bs-toggle="modal"
                     data-bs-target="#modal{{id}}"><i class="fa-solid fa-up-right-from-square"></i>
@@ -485,8 +485,8 @@
     </div>
   </div>
 </div>
-
-
+<!--Linea divisoria-->
+<div class="linea"></div>
 
 
 {{!-- Modal --}}
@@ -495,12 +495,16 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title" id="exampleModalLabel">{{titulo}}</h2>
+        <h2 style="font-family: 'Fjalla One', sans-serif;" class="modal-title" id="exampleModalLabel">{{titulo}}</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <h5>{{subtitulo}}</h5>
+        <h5 style="font-family: 'Merriweather', serif;">{{subtitulo}}</h5>
+        <!--Linea divisoria-->
+        <div class="linea"></div>
         <img src="{{imagen}}" alt="">
+        <!--Linea divisoria-->
+        <div class="linea"></div>
         <p>{{cuerpo}}</p>
       </div>
     </div>
