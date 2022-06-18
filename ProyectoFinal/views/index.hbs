@@ -20,19 +20,8 @@
         <li class="nav-item">
           <a class="nav-link" data-scroll href="/tienda/shop">Tienda</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Administrador
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/admin/login">Ingresar</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Registrarse</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" data-scroll href="/admin/login">Administrador</a>
         </li>
       </ul>
 
@@ -308,7 +297,7 @@
         <div class="modal-dialog modal-fullscreen">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Nuestras Fotografias</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Nuestras Ediciones</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -372,8 +361,7 @@
                       </div>
                       <div class="col">
                         <div class="card border-0">
-                          <img src="/images/Edicion/edicion8.jpg" style="width: 300px;" class="card-img-top"
-                            alt="...">
+                          <img src="/images/Edicion/edicion8.jpg" style="width: 300px;" class="card-img-top" alt="...">
                           <div class="card-body">
                           </div>
                         </div>
@@ -401,27 +389,28 @@
 {{!-- NOVEDADES --}}
 <div class="container-fluid">
   <div class="row">
-
     <div class="col-sm-8">
-      <div class="boxnovedades">
-        <div class="row row-cols-1 row-cols-md-3 g-3">
-          {{#each novedades}}
-          <div class="col">
-            <div class="card bg-dark text-white border-0">
-              <a href="#"><img src="{{{imagen}}}" class="img-fluid rounded-start opacity-50" class="card-img-top">
-              </a>
-              <div class="card-img-overlay">
-                <h5 style="font-family: 'Fjalla One', sans-serif;" class="card-title">{{titulo}}</h5>
-                <p style="font-family: 'Merriweather', serif;" class="card-text ">{{subtitulo}}</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                  <a href="javascript:void(0);" class="btn btn-outline-light  btn-sm" data-bs-toggle="modal"
-                    data-bs-target="#modal{{id}}"><i class="fa-solid fa-up-right-from-square"></i>
-                  </a>
+      <div class="overflow-auto">
+        <div class="boxnovedades">
+          <div class="row row-cols-1 row-cols-md-3 g-3">
+            {{#each novedades}}
+            <div class="col">
+              <div class="card bg-dark text-white border-0">
+                <a href="#"><img src="{{{imagen}}}" class="img-fluid rounded-start opacity-50" class="card-img-top">
+                </a>
+                <div class="card-img-overlay">
+                  <h5 style="font-family: 'Fjalla One', sans-serif;" class="card-title">{{titulo}}</h5>
+                  <p style="font-family: 'Merriweather', serif;" class="card-text ">{{subtitulo}}</p>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="javascript:void(0);" class="btn btn-outline-light  btn-sm" data-bs-toggle="modal"
+                      data-bs-target="#modal{{id}}"><i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
+            {{/each}}
           </div>
-          {{/each}}
         </div>
       </div>
     </div>
@@ -429,6 +418,7 @@
     <div class="col-1"></div>
     <div class="col-sm-3 align-self-center">
       <div class="container">
+        <h2 class="text-center rounded fs-1 bg-light bg-opacity-25 text-dark">Testimonios</h2>
         <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -511,7 +501,9 @@
   </div>
 </div>
 {{/each}}
-</div>
+
+
+
 
 
 <!--Contacto-->
@@ -533,31 +525,27 @@
           <form action="/" method="post" class="">
             <p>
               <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" name="nombre">
+              <input type="text" class="form-control" name="nombre" required>
             </p>
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" placeholder="name@example.com" name="email">
+            <input type="email" class="form-control" placeholder="name@example.com" name="email" required>
             <div class="form-group">
               <label for="mensaje">Mensaje</label>
               <textarea class="form-control" name="mensaje" id="mensaje" rows="4"></textarea>
             </div>
             <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
               <label class="form-check-label" for="exampleCheck1">No soy un robot</label>
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
           {{#if message}}
-          {{message}}
+          <div class="alert alert-info" role="alert">
+            {{message}}
+          </div>
           {{/if}}
         </div>
       </div>
     </div>
   </div>
-</div>
-
-
-
-
-
 </div>

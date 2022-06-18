@@ -1,34 +1,3 @@
-{{!-- Barra de tienda --}}
-<div class="BTienda">
-  <div class="row">
-    <div class="col-10">
-    </div>
-    <div class="col-1">
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-dark position-relative" style="border: 1px solid #d4d4d4;" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-bag-shopping">
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              22
-              <span class="visually-hidden">unread messages</span>
-            </span>
-          </i>
-        </button>
-      </div>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-          <h5 id="offcanvasRightLabel">Carrito de compras</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          ...
-        </div>
-      </div>
-    </div>
-    <div class="col-1">
-    </div>
-  </div>
-</div>
-
 {{!-- Tienda --}}
 
 <div class="container">
@@ -37,202 +6,93 @@
     <div class="col-xl">
       <div class="GrillaTienda">
         {{!-- Grilla Tazas --}}
-        <h2>Tazas</h2>
+        <h2>Nuestros Productos</h2>
         <div class="row row-cols-1 row-cols-md-4 g-3">
+          {{#each shop}}
           <div class="col">
             <div class="card border-secondary mb-3">
-              <img src="/images/Taza1.jpg" class="card-img-top" alt="...">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modal{{id}}"><img src="{{imagen}}"
+                  class="card-img-top" alt="..."></a>
               <div class="card-body">
                 <div class="row justify-content-md">
-                  <div class="col-9">
-                    <h5 class="card-title">Posibilidades</h5>
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-plus"></i></button>
+                  <div class="col">
+                    <h5 class="card-title">{{nombreProducto}}</h5>
+                    <p class="fst-italic text-muted">{{producto}}</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card border-secondary mb-3">
-              <img src="/images/Taza2.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="row justify-content-md">
-                  <div class="col-9">
-                    <h5 class="card-title">Océano</h5>
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border-secondary mb-3">
-              <img src="/images/Taza3.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="row justify-content-md">
-                  <div class="col-9">
-                    <h5 class="card-title">Caminos</h5>
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border-secondary mb-3">
-              <img src="/images/Taza4.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="row justify-content-md">
-                  <div class="col-9">
-                    <h5 class="card-title">Encuentro</h5>
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border-secondary mb-3">
-              <img src="/images/Taza5.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="row justify-content-md">
-                  <div class="col-9">
-                    <h5 class="card-title">Origen</h5>
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border-secondary mb-3">
-              <img src="/images/Taza6.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="row justify-content-md">
-                  <div class="col-9">
-                    <h5 class="card-title">No Problem</h5>
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {{/each}}
         </div>
-
-        {{!-- Grilla Remeras --}}
-        <div class="remeras">
-          <h2>Remeras</h2>
-        </div>
-
-        <div class="row row-cols-1 row-cols-md-4 g-3">
-          <div class="col">
-            <div class="card border-secondary mb-3">
-              <img src="/images/tienda1.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="row justify-content-md">
-                  <div class="col-9">
-                    <h5 class="card-title">Tulipan</h5>
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border-secondary mb-3">
-              <img src="/images/tienda2.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="row justify-content-md">
-                  <div class="col-9">
-                    <h5 class="card-title">Flor blanca</h5>
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border-secondary mb-3">
-              <img src="/images/tienda3.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="row justify-content-md">
-                  <div class="col-9">
-                    <h5 class="card-title">Taza Café</h5>
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border-secondary mb-3">
-              <img src="/images/tienda4.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="row justify-content-md">
-                  <div class="col-9">
-                    <h5 class="card-title">Good Days</h5>
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border-secondary mb-3">
-              <img src="/images/tienda5.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="row justify-content-md">
-                  <div class="col-9">
-                    <h5 class="card-title">Fresas</h5>
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border-secondary mb-3">
-              <img src="/images/tienda6.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="row justify-content-md">
-                  <div class="col-9">
-                    <h5 class="card-title">Esperando</h5>
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
 
   <div class="col-1"></div>
 </div>
+{{!-- Modal --}}
+{{#each shop}}
+<div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title " id="exampleModalLabel">{{nombreProducto}}
+        </h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!--Linea divisoria-->
+        <div class="linea"></div>
+        <img src="{{imagen}}" alt="">
+        <!--Linea divisoria-->
+        <div class="linea"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
 
+<!--Contacto-->
+<div id="contacto" class="Contacto">
+  <div class="container">
+    <div class="BoxContacto">
+      <div class="row ">
+        <h2>Contacto</h2>
+        <!--Formulario-->
+        <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">
+          <form action="/" method="post" class="">
+            <p>
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" name="nombre" required>
+            </p>
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="name@example.com" name="email" required>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea class="form-control" name="mensaje" id="mensaje" rows="4"></textarea>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+              <label class="form-check-label" for="exampleCheck1">No soy un robot</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+          {{#if message}}
+          <div class="alert alert-info" role="alert">
+            {{message}}
+          </div>
+          {{/if}}
+        </div>
+        {{!-- indicaciones --}}
+        <div class="col-sm-6 col-md-5 col-lg-6 g-3">
+          <div class="container">
+            <h4 class="fw-light ">Para adquirir uno de nuestros productos, envianos un mail colocando el tipo de
+              producto, su nombre con
+              la cantidad y nos estaremos comunicando en breve a tu email.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

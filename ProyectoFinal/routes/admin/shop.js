@@ -1,66 +1,69 @@
 var express = require('express');
-const pool = require('../../models/bd');
 var router = express.Router();
-var novedadesModel = require('../../models/novedadesModel');
+var shopModel = require('../../models/shopModel');
 var util = require('util');
 var cloudinary = require('cloudinary').v2;
 
 var uploader = util.promisify(cloudinary.uploader.upload);
 const destroy = util.promisify(cloudinary.uploader.destroy);
+
 // Home page
+
 router.get('/', async function (req, res, next) {
 
-  var novedades = await novedadesModel.getNovedades();
+  var shop = await shopModel.getShop();
 
-  novedades = novedades.map(novedad => {
-    if (novedad.img_id) {
-      const imagen = cloudinary.image(novedad.img_id, {
+
+  shop = shop.map(shop => {
+    if (shop.img_id) {
+      const imagen = cloudinary.image(shop.img_id, {
         width: 100,
         height: 60,
         crop: 'fill'
       });
       return {
-        ...novedad,
+        ...shop,
         imagen
       }
     } else {
       return {
-        ...novedad,
+        ...shop,
         imagen: ''
       }
     }
   });
 
-  res.render('admin/novedades',{
-      layout: 'admin/layout',
-      usuario: req.session.nombre,
-      novedades
+
+  res.render('admin/shop', {
+    layout: 'admin/layout',
+    usuario: req.session.nombre,
+    shop
   });
+
 });
-// Eliminar una novedad
-router.get('/eliminar/:id' , async (req, res, next) => {
+
+// Eliminar un Producto
+router.get('/eliminar/:id', async (req, res, next) => {
   var id = req.params.id;
 
-  let novedad = await novedadesModel.getNovedadesById(id);
-  if (novedad.img_id) {
-    await (destroy(novedad.img_id));
+  let shop = await shopModel.getShopById(id);
+  if (shop.img_id) {
+    await (destroy(shop.img_id));
   }
-  
-  await novedadesModel.deleteNovedadesById(id);
-  res.redirect('/admin/novedades')
+
+  await shopModel.deleteShopById(id);
+  res.redirect('/admin/shop')
 });
 
 // Agregar novedades
 
-router.get('/agregar',(req, res, next) => {
-  res.render('admin/agregar', {
+router.get('/agregar', (req, res, next) => {
+  res.render('admin/agregarShop', {
     layout: 'admin/layout'
   })
 });
-
-
-// Imagen
-router.post('/agregar', async (req ,res, next) => {
+// imagen
+router.post('/agregar', async (req, res, next) => {
   // console.log(req.body)
   try {
 
@@ -68,45 +71,44 @@ router.post('/agregar', async (req ,res, next) => {
     if (req.files && Object.keys(req.files).length > 0) {
       imagen = req.files.imagen;
       img_id = (await uploader(imagen.tempFilePath)).
-      public_id;
+        public_id;
     }
 
 
-    if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo !="") {
-      await novedadesModel.insertNovedad({
+    if (req.body.producto != "" && req.body.nombreProducto != "") {
+      await shopModel.insertShop({
         ...req.body,
         img_id
       });
-      res.redirect('/admin/novedades')
-    }else {
-      res.render('admin/agregar', {
-        layout: 'admin/layout', 
+      res.redirect('/admin/shop')
+    } else {
+      res.render('admin/agregarShop', {
+        layout: 'admin/layout',
         error: true,
         message: 'Todos los campos son requeridos'
       })
     }
-  }catch (error) {
+  } catch (error) {
     // console.log(error)
-    res.render('admin/agregar', {
+    res.render('admin/agregarShop', {
       layout: 'admin/layout',
       error: true,
       message: 'No se cargo la novedad'
     })
   }
 })
-
 // modificacion y llamado de Selecion
 
 router.get('/modificar/:id', async (req, res, next) => {
   var id = req.params.id;
-  var novedad = await novedadesModel.getNovedadesById(id);
-  res.render('admin/modificar', {
+  var shop = await shopModel.getShopById(id);
+  res.render('admin/modificarShop', {
     layout: 'admin/layout',
-    novedad
+    shop
   });
 });
 
-router.post('/modificar', async(req, res, next) => {
+router.post('/modificar', async (req, res, next) => {
   try {
 
     let img_id = req.body.img_original;
@@ -127,20 +129,19 @@ router.post('/modificar', async(req, res, next) => {
     }
 
     var obj = {
-      titulo: req.body.titulo,
-      subtitulo: req.body.subtitulo,
-      cuerpo: req.body.cuerpo,
+      producto: req.body.producto,
+      nombreProducto: req.body.nombreProducto,
       img_id
     }
-    
-    await novedadesModel.modificarNovedadByid(obj, req.body.id);
-    res.redirect('/admin/novedades');
+
+    await shopModel.modificarShopByid(obj, req.body.id);
+    res.redirect('/admin/shop');
   } catch (error) {
-    console.log(error)
-    res.render('admin/modificar', {
+    // console.log(error)
+    res.render('admin/modificarShop', {
       layout: 'admin/layout',
       error: true,
-      message: 'No se modifico la novedad'
+      message: 'No se modifico el producto'
     })
   }
 });

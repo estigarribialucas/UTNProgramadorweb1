@@ -22,6 +22,7 @@ h1 {
 }
 h2 {
     font-family: 'Julius Sans One', sans-serif;
+    padding-bottom: 15px;
 }
 
 .BTienda {
@@ -36,11 +37,24 @@ h2 {
 .GrillaTienda {
     border: 1px solid #c2bfbf;
     padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 120px;
+    margin-bottom: 80px;
     border-radius: 8px 8px 8px 8px;
     background-color: #f8f6f6;
     box-shadow: 9px 7px 13px -4px rgba(0,0,0,0.69);
+}
+/* Linea divisoria */
+.linea {
+    border-top: 1px solid rgba(175, 175, 175, 0.658);
+    max-width: 100%;
+    margin: 20px auto 0 auto;
+    padding-bottom: 20px;
+}
+.BoxContacto {
+    background-color: #ebe9e9e7;
+    padding: 3%;
+    border: 1px solid #d8d7d7;
+    border-radius: 9px 9px 9px 9px;
 }
 .footer {
     margin-top:100px ;

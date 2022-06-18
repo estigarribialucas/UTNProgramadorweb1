@@ -8,7 +8,8 @@ var cloudinary = require('cloudinary').v2;
 router.get('/', async function (req, res, next) {
   var novedades = await novedadesModel.getNovedades()
 
-  novedades = novedades.splice(0, 6);
+
+  // novedades = novedades.splice(0, 6);
 
   novedades = novedades.map(novedad => {
     if (novedad.img_id) {
@@ -30,19 +31,44 @@ router.get('/', async function (req, res, next) {
   });
   
   res.render('index', {
-    novedades
+    novedades,
   });
 });
 
 
-
+// Envio de email
 router.post('/', async (req, res, next) => {
+
+  // Solucion a problema con las novedades en el index que no se visualizan
+  var novedades = await novedadesModel.getNovedades()
+
+
+  // novedades = novedades.splice(0, 6);
+
+  novedades = novedades.map(novedad => {
+    if (novedad.img_id) {
+      const imagen = cloudinary.url(novedad.img_id, {
+        width: 450,
+        height: 350,
+        crop: 'fill'
+      });
+      return {
+        ...novedad,
+        imagen
+      }
+    } else {
+      return {
+        ...novedad,
+        imagen: '/images/noimage.jpg',
+      }
+    }
+  });
 
   var nombre = req.body.nombre;
   var email = req.body.email;
   var mensaje = req.body.mensaje;
 
-  console.log(req.body)
+  // console.log(req.body)
 
   var obj = {
     to: 'estigarribia.l97@gmail.com',
@@ -63,6 +89,7 @@ router.post('/', async (req, res, next) => {
   var info = await transport.sendMail(obj);
 
   res.render('index', {
+    novedades,
     message: 'Mensaje enviado correctamente'
   });
 });

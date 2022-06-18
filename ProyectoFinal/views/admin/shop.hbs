@@ -11,7 +11,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="http://localhost:3000/">Home</a></li>
-                <li><a class="dropdown-item" href="/admin/shop">Tienda</a></li>
+                <li><a class="dropdown-item" href="/admin/novedades">Novedades</a></li>
                 <li>
                     <hr class="dropdown-divider">
                 </li>
@@ -31,9 +31,9 @@
                 <div class="container ">
                     <nav class="navbar navbar-dark bg-dark rounded-top ">
                         <div class="container-fluid">
-                            <a class="navbar-brand">Listado de Novedades</a>
+                            <a class="navbar-brand">Listado de Productos</a>
                             <form class="d-flex">
-                                <a href="/admin/novedades/agregar" class="btn btn-success"><i
+                                <a href="/admin/shop/agregar" class="btn btn-success"><i
                                         class="fa-solid fa-file-circle-plus"></i> Nuevo</a>
                             </form>
                         </div>
@@ -44,21 +44,23 @@
                         <thead>
                             <tr class="table-secondary">
                                 <th scope="col">#</th>
-                                <th scope="col">Titulo</th>
-                                <th scope="col">Imagen</th>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col" class="text-end">Imagen</th>
                                 <th scope="col" class="text-end">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {{#each novedades}}
+                            {{#each shop}}
                             <tr>
                                 <th scope="row">{{id}}</th>
-                                <td>{{titulo}}</td>
-                                <td>{{{imagen}}}</td>
+                                <td>{{producto}}</td>
+                                <td>{{nombreProducto}}</td>
+                                <td class="text-end">{{{imagen}}}</td>
                                 <td class="text-end">
-                                    <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary"><i
+                                    <a href="/admin/shop/modificar/{{id}}" class="btn btn-secondary"><i
                                             class="fas fa-pencil-alt"></i></a>
-                                    <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary"><i
+                                    <a href="/admin/shop/eliminar/{{id}}" class="btn btn-secondary"><i
                                             class="fas fa-trash"></i></a>
                                 </td>
                             </tr>

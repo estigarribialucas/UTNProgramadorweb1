@@ -2,7 +2,7 @@ var pool = require('./bd');
 
 
 async function getNovedades() {
-    var query = 'select * from novedades';
+    var query = 'select * from novedades order by id asc';
     var rows = await pool.query(query);
     return rows;
 }
@@ -44,4 +44,7 @@ async function modificarNovedadByid(obj, id) {
 }
 
 
-module.exports = { getNovedades, deleteNovedadesById, insertNovedad, getNovedadesById, modificarNovedadByid }
+
+
+
+module.exports = { getNovedades, deleteNovedadesById, insertNovedad, getNovedadesById, modificarNovedadByid,}
